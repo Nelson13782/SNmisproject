@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samantha Nelson - Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5e9e9;
+        }
+
+        .resume-container {
+            background-color: rgb(249, 245, 245);
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-name {
+            color: #7a0019;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #7a0019;
+            border-bottom: 2px solid #7a0019;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-header, .education-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .organization {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .date {
+            color: #666;
+        }
+
+        .title {
+            font-style: italic;
+            color: #444;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background-color: #f7ecee;
+            padding: 5px 15px;
+            border-radius: 15px;
+            color: #7a0019;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #7a0019;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #7a0019;
+        }
+
+        /* Preserve existing nav styles */
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        @media print {
+            nav, footer, .download-section {
+                display: none;
+            }
+            .resume-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu (same on all pages) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+        <style>
+            /* ===== NAVIGATION ===== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--secondary-color);
+    font-weight: bold;
+}
+
+        </style>
+    </nav>
+
+
+    <div class="download-section">
+        <a href="files/MIS - Samantha Nelson Resume Fall 2025.pdf" class="download-button" download>
+            Download PDF Version
+        </a>
+    </div>
+
+    <div class="resume-container">
+        <div class="resume-header">
+            <h1 class="resume-name">Samantha Nelson</h1>
+            <div class="contact-info">
+                Email: samanthanelson@email.com<br>
+                Phone: (123) 456-7890<br>
+                Address: 123 56th St Twin Cities, MN 55123
+            </div>
+        </div>
+    
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <span class="organization">University of Minnesota Duluth</span>
+                    <span class="date">Expected May 2029</span>
+                </div>
+                <div class="title">Bachelor of Accounting</div>
+                <ul>
+                    <li>GPA: 4.0</li>
+                    <li>University Honors</li>
+                </ul>
+                 <span class="organization">White Bear Lake Area High School</span>
+                    <span class="date">Graduated May 2025</span>
+                </div>
+                <div class="title">High School Diploma</div>
+                <ul>
+                    <li>GPA: 4.261</li>
+                    <li>Summa Cum Laude</li>
+                </ul>
+            </div>
+        
+    
+        <div class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="organization">Washington County Parks</span>
+                    <span class="date">Spring & Summer 2025</span>
+                </div>
+                <div class="title">Seasonal Guest Service Attendant</div>
+                <ul>
+                    <li>Customer Service</li>
+                    <li>Cash Handling</li>
+                    <li>Facility Management</li>
+                </ul>
+            </div>
+              <span class="organization">White Bear Lake Areas Schools</span>
+                    <span class="date">Summer 2023 & 2024</span>
+                </div>
+                <div class="title">Tech Depot Student Lead</div>
+                <ul>
+                    <li>Managing input and output of school technology</li>
+                    <li>Team Management</li>
+                        </ul>
+        
+    
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill-item">Intermediate French</span>
+                <span class="skill-item">Google Workspace</span>
+                <span class="skill-item">Customer Service</span>
+            
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Activities</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="organization">Duluth Center for Women and Children</span>
+                    <span class="date">2025 - Present</span>
+                </div>
+                <div class="title">Volunteer</div>
+                <ul>
+                    <li>Record financial transactions</li>
+                    <li>Manage and create invoices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same on all pages) -->
+    <footer>
+        <p>&copy; 2025 Samantha Nelson. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
