@@ -26,15 +26,43 @@
 
 
 // Mobile menu toggle
-    function initMobileMenu() {
+function initMobileMenu() {
     const menuBtn = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav ul');
-    if (menuBtn) {
-    menuBtn.addEventListener('click', function(){
-        nav.classList.toggle('show');
-    });
+    const menuBars = document.querySelectorAll('.menu-toggle .bar');
+    
+    if (menuBtn && nav) {
+        // Toggle menu on button click
+        menuBtn.addEventListener('click', function() {
+            nav.classList.toggle('show');
+            menuBtn.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !menuBtn.contains(e.target) && nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                menuBtn.classList.remove('active');
+            }
+        });
+
+        // Close menu when window is resized to desktop view
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('show');
+                menuBtn.classList.remove('active');
+            }
+        });
+
+        // Close menu when a link is clicked
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('show');
+                menuBtn.classList.remove('active');
+            });
+        });
     }
-    }
+}
 
 
 
